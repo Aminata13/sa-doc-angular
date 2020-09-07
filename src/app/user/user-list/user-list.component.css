@@ -1,0 +1,12 @@
+.avatar {
+  width: 7rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.table {
+  width: 90%;
+  margin-left: 5%;
+}
+button {
+  float: right;
+}

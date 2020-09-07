@@ -1,0 +1,24 @@
+<table class="table" aria-describedby="Table to display saved users">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Prénom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Nom d'utilisateur</th>
+      <th scope="col">Email</th>
+      <th scope="col">Profil</th>
+      <th scope="col">Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.profil.libelle|lowercase}}</td>
+      <td><img class="avatar" src="data:image/JPEG;base64,{{user.avatar}}" alt="user profil image"></td>
+    </tr>
+  </tbody>
+</table>
+
+<button [routerLink]="['/user/new']" type="button" class="btn btn-info mt-5 mr-5">Ajouter un utilisateur</button>
